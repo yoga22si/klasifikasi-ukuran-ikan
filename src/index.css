@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* index.css */
+
+/* index.css */
+
+.gradient-bg {
+    background: linear-gradient(to right, #6496F4, #A288EC);
+    color: white;
+}
+/* index.css or a similar CSS file */
+.gradient-bg {
+    background: linear-gradient(to right, #3A7BD5, #00D2FF);
+  }
+  
+
+.gradient-text {
+    background: linear-gradient(to right, #1D4ED8, #9D28B3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.active {
+    color: #007BFF; /* Warna sorotan */
+    font-weight: bold; /* Opsional: Membuat teks tebal */
+    border-bottom: 2px solid #007BFF; /* Opsional: Menambahkan garis bawah */
+  }
+
+  .animated-button:hover {
+    transform: scale(1.05);
+    background-color: #2c3e50; /* Change to your desired hover color */
+}
+
+.animated-button:hover::before {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+}
+
+.animated-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.glow-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.glow-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #42a5f5, #478ed1, #3A7BD5, #1e88e5);
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.glow-button:hover {
+  background-color: #3A7BD5; /* Change to your desired hover color */
+}
+
+.glow-button:hover::before {
+  opacity: 1;
+}
+
+.gradient-bg {
+  background: linear-gradient(to right, #3B82F6, #9333EA, #EC4899);
+}
+
+
+
+
+
